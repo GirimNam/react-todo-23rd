@@ -35,7 +35,7 @@ function Header() {
     setDate(newDate)
   }
 
-  const formatted = `${date.getFullYear()}년 ${date.getMonth + 1}월 ${date.getDate}일`
+  const formatted = `${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일`
 
   return (
     /* 제목 및 날짜, 날짜 이동 버튼 */
