@@ -20,7 +20,7 @@ function Input({ todos, setTodos }) {
       <form onSubmit={clickSubmit}>
         <input
           value={input}
-          onChange={onChange}
+          onChange={() => setInput(e.target.value)}
           placeholder="할 일을 입력하세요."
         />
         <button type="submit">추가</button>
