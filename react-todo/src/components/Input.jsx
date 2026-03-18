@@ -18,7 +18,11 @@ function Input({ todos, setTodos }) {
   return (
     <section className="inputlist">
       <form onSubmit={clickSubmit}>
-        <input value={input} onChange={onChange} placeholder="TO DO 추가" />
+        <input
+          value={input}
+          onChange={onChange}
+          placeholder="할 일을 입력하세요."
+        />
         <button type="submit">추가</button>
       </form>
 
