@@ -7,10 +7,10 @@ function App() {
 
   return (
     <>
-    <div>
-      
-    </div>
+    <div className='min-h-screen flex justify-center'>
       <Header />
+    </div>
+      
     </>
   )
 }
