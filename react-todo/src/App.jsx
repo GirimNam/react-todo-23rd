@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './App.css'
 import Header from './components/header'
 import Input from './components/input'
 import List from './components/List'
@@ -18,12 +17,16 @@ function App() {
   }, [todos])
 
   return (
-    <div id="app">
-      <div className="min-h-screen flex justify-center">
-        <Header />
-        <Input todos={todos} setTodos={setTodos} />
-        <List todos={todos} setTodos={setTodos} />
-      </div>
+    <div className="w-full min-h-screen flex flex-col items-center">
+      <Header />
+      <Input
+        todos={todos}
+        setTodos={setTodos}
+      />
+      <List
+        todos={todos}
+        setTodos={setTodos}
+      />
     </div>
   )
 }

@@ -42,12 +42,18 @@ function Header() {
     <header className="flex flex-col items-center gap-4">
       <h1 className="py-1 text-3xl text-black-500 font-bold">TO DO LIST</h1>
 
-      <div className="flex flex-row px-2">
-        <button className="px-2" onClick={prevButton}>
+      <div className="flex flex-row p-2">
+        <button
+          className="px-2"
+          onClick={prevButton}
+        >
           ◀
         </button>
         <h2>{formatted}</h2>
-        <button className="px-2" onClick={nextButton}>
+        <button
+          className="px-2"
+          onClick={nextButton}
+        >
           ▶
         </button>
       </div>
