@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
+import { Temporal } from '@js-temporal/polyfill'
 
 function Header() {
-  const [date, setDate] = useState(new Date()) //바로 Date() 객체 만들어서 date 변수값 설정
+  const [date, setDate] = useState(Temporal.Now.plainDateISO('Asia/Seoul'))
 
-  /* 배경색 요일별로 설정 */
-  const rainbowColors = [
+  /* 배경색 전역변수로 요일별로 설정 */
+  const RAINBOW_COLORS = [
     '#f9d6d6',
     '#FFD6A5',
     '#f8f9ca',
@@ -15,27 +16,23 @@ function Header() {
   ]
 
   useEffect(() => {
-    const dayIndex = date.getDay()
+    const dayIndex = date.day
     const shiftIndex = (dayIndex + 6) % 7
-    const color = rainbowColors[shiftIndex]
+    const color = RAINBOW_COLORS[shiftIndex]
 
     document.body.style.backgroundColor = color
   }, [date])
 
   /* 날짜 이동 버튼 함수 */
   const prevButton = () => {
-    const newDate = new Date(date)
-    newDate.setDate(date.getDate() - 1)
-    setDate(newDate)
+    setDate(date.subtract({ days: 1 }))
   }
 
   const nextButton = () => {
-    const newDate = new Date(date)
-    newDate.setDate(date.getDate() + 1)
-    setDate(newDate)
+    setDate(date.add({ days: 1 }))
   }
 
-  const formatted = `${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일`
+  const formatted = `${date.year}년 ${date.month}월 ${date.day}일`
 
   return (
     /* 제목 및 날짜, 날짜 이동 버튼 */
