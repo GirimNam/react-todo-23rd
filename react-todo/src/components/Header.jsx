@@ -32,7 +32,7 @@ function Header({ date, setDate }) {
   const formatted = `${date.year}년 ${date.month}월 ${date.day}일`
 
   return (
-    /* 제목 및 날짜, 날짜 이동 버튼 */
+    /* 제목 및 날짜, 날짜 이동 버튼  */
     <header className="flex flex-col items-center gap-4">
       <h1 className="py-1 text-3xl text-black-500 font-bold">TO DO LIST</h1>
 
