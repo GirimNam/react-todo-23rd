@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Temporal } from '@js-temporal/polyfill'
 
-function Header() {
-  const [date, setDate] = useState(Temporal.Now.plainDateISO('Asia/Seoul'))
-
+function Header({ date, setDate }) {
   /* 배경색 전역변수로 요일별로 설정 */
   const RAINBOW_COLORS = [
     '#f9d6d6',
@@ -16,7 +13,7 @@ function Header() {
   ]
 
   useEffect(() => {
-    const dayIndex = date.day
+    const dayIndex = date.dayOfWeek
     const shiftIndex = (dayIndex + 6) % 7
     const color = RAINBOW_COLORS[shiftIndex]
 

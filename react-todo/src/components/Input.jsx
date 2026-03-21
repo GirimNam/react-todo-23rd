@@ -12,7 +12,7 @@ function Input({ todos, setTodos }) {
       return
     }
 
-    setTodos([...todos, { text: input, done: false }])
+    setTodos((prev) => [...prev, { text: input, done: false }])
     setInput('')
   }
 
