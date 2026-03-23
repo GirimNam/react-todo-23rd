@@ -27,7 +27,7 @@ function Input({ todos, setTodos }) {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="할 일을 입력하세요."
-          className="flex-1 p-4 rounded border border-black"
+          className="flex-1 p-4 rounded border border-black bg-white"
         />
         <button
           type="submit"
