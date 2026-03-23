@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Temporal } from '@js-temporal/polyfill'
-import Header from './components/Header.jsx'
-import Input from './components/Input.jsx'
-import List from './components/List.jsx'
+import Header from '@components/Header'
+import Input from '@components/Input'
+import List from '@components/List'
 
 function App() {
   const [todos, setTodos] = useState([])
