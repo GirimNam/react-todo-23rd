@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 function Header({ date, setDate }) {
   /* 배경색 전역변수로 요일별로 설정 */
